@@ -3,6 +3,8 @@ TwitterPopularTags: the famous example of Spark Streaming in a standalone projec
 
 ## QUICK START
 
+* install Apache Spark (http://spark.apache.org/):wq
+* install sbt (http://www.scala-sbt.org/)
 * git clone https://github.com/matteoredaelli/TwitterPopularTags
 * cd TwitterPopularTags
 * cp twitter4j.properties.sample twitter4j.properties
