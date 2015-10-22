@@ -1,0 +1,6 @@
+http.proxyHost=myproxy.redaelli.org
+http.proxyPort=80
+oauth.consumerKey=XXX
+oauth.consumerSecret=XXX
+oauth.accessToken=XXX
+oauth.accessTokenSecret=XXX
