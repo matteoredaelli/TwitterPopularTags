@@ -25,13 +25,13 @@ object TwitterPopularTags  {
     // System.setProperty("twitter4j.oauth.consumerSecret", consumerSecret)
     // System.setProperty("twitter4j.oauth.accessToken", accessToken)
     // System.setProperty("twitter4j.oauth.accessTokenSecret", accessTokenSecret)
-    // System.setProperty("http.proxyHost", "lucifer.pirelli.com");
+    // System.setProperty("http.proxyHost", "proxy.redaelli.org");
     // System.setProperty("http.proxyPort", 80);
-    // System.setProperty("https.proxyHost", "lucifer.pirelli.com");
+    // System.setProperty("https.proxyHost", "proxy.redaelli.org");
     // System.setProperty("https.proxyPort", 80);
 
     val sparkConf = new SparkConf().setAppName("TwitterPopularTags")
-    val ssc = new StreamingContext(sparkConf, Seconds(10))
+    val ssc = new StreamingContext(sparkConf, Seconds(30))
     val stream = TwitterUtils.createStream(ssc, None, filters)
 
     val hashTags = stream.flatMap(status => status.getText.split(" ").filter(_.startsWith("#")))
